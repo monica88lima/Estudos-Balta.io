@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Mali', cursive;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    text-align: center;
+
+    height: 100vh;
+    background: rgb(247, 218, 238);
+    background: linear-gradient(180deg, rgba(247, 218, 238, 1) 0%, rgba(231, 58, 192, 0.6560749299719888) 35%, rgba(154, 12, 230, 1) 100%);
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 3px 5px #000;
+}
+button{
+    cursor: pointer;
+}
+ul{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    list-style:none;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 3px 4px 14px 0px rgba(0,0,0,0.39);
+
+
+}
+ul li{
+    padding: 15px;
+    margin: 10px;
+    font-size: 1em;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0,0,0,0.2) ;
+   
+
+}
+
+li>button{
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    float: right;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+li>button:hover{
+    opacity: 1;
+    transition: opacity 1s;
+    color: blueviolet;
+    
+}
