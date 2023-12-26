@@ -1,29 +1,39 @@
 <h1 class="title animated jackInTheBox">Lista de Tarefas</h1>
-<ul class="animated tada" *ngIf="mode == 'list'" >
+<ul class="animated jackInTheBox" *ngIf="mode=='list'" >
   <p><small *ngIf="todos.length == 0">Você não tem tarefa hoje!</small></p>
-  <li *ngFor="let todo of todos">{{todo.id}}.{{todo.todo}} | <button *ngIf="!todo.done"
-      (click)="mudaStatusTrue(todo)">Concluir</button>
-    | <button *ngIf="todo.done" (click)="mudaStatusfalse(todo)">Refazer</button>|<button
-      (click)="removeTarefa(todo)">Remover</button></li>
-</ul>
-<div id="modal" *ngIf="mode == 'adicionar'" class = "animated flipInX">
-  <form [formGroup]="form">
-    <fieldset>
-      <label>Tarefa </label>
-      <input type="text" placeholder="Titulo da Tarefa" maxlength="60" formControlName="title">
-      
-      
-      <button [disabled]="form.invalid" (click)="adicionarTarefa()"> Salvar </button>
-    </fieldset>
-  </form>
+  <li *ngFor="let todo of todos">{{todo.id}}.{{todo.todo}} 
 
+    <button *ngIf="!todo.done"
+      (click)="mudaStatusTrue(todo)">Concluir
+    </button>
+
+    <button *ngIf="todo.done" 
+    (click)="mudaStatusfalse(todo)">Refazer
+    </button>
+
+    <button
+      (click)="removeTarefa(todo)">Remover
+    </button>
+
+  </li>
+</ul>
+<div id="modal" *ngIf="mode=='add'" class="animated jackInTheBox">
+  <form [formGroup]="form">
+    
+      <label><h2>Tarefa</h2> </label>
+      <input type="text" placeholder="Titulo da Tarefa" maxlength="60" formControlName="title">
+          
+      <button class="button"[disabled]="form.invalid" (click)="adicionarTarefa()"> Salvar </button>
+    
+  </form>
+ 
 </div>
-<button class="add-button animated fadeInUp button" (click)="trocarModo('adicionar')" *ngIf="mode=='list'">
+<button class="button" (click)="trocarModo('add')" *ngIf="mode=='list'">
   <i class="fas fa-plus-circle"></i>
-  NOVA TAREFA
+  Nova Tarefa
 </button>
-<button class="add-button animated fadeInUp button" (click)="trocarModo('list')" *ngIf="mode=='add'">
+<button class="button" (click)="trocarModo('list')" *ngIf="mode=='add'">
   <i class="fas fa-times"></i>
-  CANCELAR
-</button>
+  Cancelar</button>
+
 

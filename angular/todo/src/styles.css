@@ -43,7 +43,7 @@ ul li{
 
 li>button{
     border: none;
-    background-color: #fff;
+    background-color: #f8f5f5;
     font-size: 1em;
     float: right;
     opacity: 0.6;
@@ -55,3 +55,40 @@ li>button:hover{
     color: blueviolet;
     
 }
+.button{
+    
+  background-color: #000;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: 100;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 10px;
+
+}
+
+input {
+    width: 100%;
+    line-height: 40px;
+    text-indent: 10px;
+    font-size: 1.2em;
+    padding: 2px;
+    
+}
+
+#modal {
+    text-align: left;
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 10px;
+    
+    
+
+   
+  }
+  
+ 
